@@ -1,0 +1,92 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #a18cd1, #fbc2eb); /* soft purple-pink gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main container (login card) */
+main {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    width: 340px;
+    text-align: center;
+    margin-left: -260px;
+}
+
+/* Heading inside the card */
+h1 {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    margin-left: 100px;
+    color: #4b0082; /* deep purple */
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Form inputs */
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    
+}
+
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    border-color: #6a0dad; /* purple highlight */
+    outline: none;
+}
+
+/* Submit button */
+form .login1[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: #6a0dad; /* purple */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+form .login1[type="submit"]:hover {
+    background: #4b0082; /* darker purple */
+}
+
+/* Submit button */
+.create1 {
+    width: 100%;
+    padding: 12px;
+    background: #6a0dad; /* purple */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.create1:hover {
+    background: #4b0082; /* darker purple */
+}

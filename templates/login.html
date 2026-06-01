@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylelogin.css') }}">
+</head>
+<body>
+    <header style="margin-top: -500px ;;">
+        <h1>Login page</h1><br>
+    </header>
+    <br>
+    <main>
+        <form action="/login1" method="post">
+            <input type="email" placeholder="email or phone" name="Email"><br>
+            <input type="password" name="npass_word"><br>
+            <button class="login1" type="submit">login</button>
+        </form>
+        {% if message %}
+        <p style="color:red;">{{ message }}</p>
+        {% endif %}
+        <p>create a new account</p>
+        <a href="/Create_account"><button class="create1">create</button></a>
+    </main>
+</body>
+</html>

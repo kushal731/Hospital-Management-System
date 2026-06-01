@@ -1,0 +1,64 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #f3e8ff; /* light purple background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Form container */
+form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    width: 320px;
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    color: #6a0dad; /* deep purple */
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="email"],
+input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #6a0dad;
+}
+
+/* Submit button */
+.create_acc[type="submit"] {
+    width: 95%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.create_acc[type="submit"]:hover {
+    background: #4b0082; /* darker purple */
+}

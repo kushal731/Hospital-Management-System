@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital management</title>
+    <style>
+      button#butid82 {
+        background: #bdb3ff;
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      button#butid82:hover {
+        background: #483d8b;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body id="body1">
+    <header>
+      <!-- Left: Logo -->
+      <div class="logo">
+        <img src="static\hospital1.jpg" alt="Logo" width="150" />
+      </div>
+
+      <!-- Middle: Search -->
+      <div class="search-bar" id="serach_div">
+        <h3 style="color: white">Search what type of service you want</h3>
+        <form action="/search" method="post">
+          <input type="text" placeholder="Search" name="AAname" id="search_Input"/>
+          <div class="sub">
+            <button type="submit" class="search" id="search_butt">
+              <img
+                id="search1"
+                src="{{ url_for('static', filename='search_logo.jpg') }}"
+              />
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Right: Navigation -->
+      <nav>
+        <a href="/home">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/Create_account">account create</a>
+        <a href="/">login</a>
+        <a href="/responses">Responses</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1 style="text-align: center" id="h1_main">Welcome to Our Hospital</h1>
+      <br />
+      <div id="div_color"><button id="but_color">dark-mode</button></div>
+      <h4 id="h4_main">Overview of our hospital</h4>
+      <br />
+
+      <p style="text-align: left">
+        At [Your Hospital Name], we are committed to delivering world-class
+        healthcare with compassion, innovation, and excellence. Our hospital
+        brings together highly skilled doctors, advanced technology, and
+        patient-centered care to serve the diverse medical needs of our
+        community.
+      </p>
+      <br />
+
+      <dl style="text-align: left">
+        <div class="div_car_main">
+          <img
+            class="div_img"
+            src="{{ url_for('static', filename='cardiology.jpg') }}"
+          />
+          <div id="div_car">
+            <dt>
+              <u><b>Cardiology</b></u>
+            </dt>
+            <dd>
+              Deals with heart diseases, cardiac surgery, and related
+              treatments. Here is the link to more details about this department
+              Cardiology is the branch of medicine that deals with the heart and
+              blood vessels. It focuses on diagnosing and treating conditions
+              such as heart disease, arrhythmias, heart failure, and
+              hypertension. Cardiologists perform procedures like angioplasty,
+              echocardiography, and cardiac surgery to restore heart health.
+              Preventive care, including lifestyle management and early
+              detection, is also a key part of cardiology. This department plays
+              a vital role in saving lives by managing emergencies like heart
+              attacks and providing long-term cardiac care.
+              <button id="butid81">Cardiology</button>
+            </dd>
+          </div>
+          <br />
+        </div>
+        <br />
+<br />
+        <div class="div_car_main2">
+          <img
+            class="div_img2"
+            src="{{ url_for('static', filename='Neurology.png') }}"
+          />
+          <div id="div_car2">
+            <dt>
+              <u><b>Neurology</b></u>
+            </dt>
+            <dd>
+              The Neurology Department specializes in the diagnosis, treatment,
+              and management of disorders affecting the brain, spinal cord, and
+              nervous system. Our team of expert neurologists provides
+              comprehensive care for patients with complex neurological
+              conditions, combining advanced technology with compassionate
+              support. <button id="butid82">Neurology</button>
+            </dd>
+          </div>
+          <br />
+        </div>
+        <br />
+<br />
+        <div class="div_car_main">
+          <img
+            class="div_img"
+            src="{{ url_for('static', filename='Orthopedics.jpg') }}"
+          />
+          <div id="div_car">
+            <dt>
+              <u><b>Orthopedics</b></u>
+            </dt>
+            <dd>
+              Specializes in bone fractures, arthritis, and joint replacements.
+              <button id="butid83">Orthopedics</button>
+            </dd>
+          </div>
+          <br />
+        </div>
+        <br />
+<br />
+        <div class="div_car_main" >
+          <img
+            class="div_img"
+            src="{{ url_for('static', filename='Pediatrics.jpg') }}"
+          />
+          <div id="div_car" >
+            <dt style="color: #5e5a5a;">
+              <u><b>Pediatrics</b></u>
+            </dt>
+            <dd style="color: #5e5a5a;">
+              Dedicated child care, vaccinations, and neonatal services.
+              <button id="butid84">Pediatrics</button>
+            </dd>
+          </div>
+          <br />
+        </div>
+        <br />
+<br />
+        <div class="div_car_main">
+          <img
+            class="div_img"
+            src="{{ url_for('static', filename='Oncology.jpg') }}"
+          />
+          <div id="div_car">
+            <dt>
+              <u><b>Oncology</b></u>
+            </dt>
+            <dd>
+              Comprehensive cancer diagnosis, chemotherapy, and radiation
+              therapy.
+              <button id="butid85">Oncology</button>
+            </dd>
+          </div>
+          <br />
+        </div>
+<br /><br />
+        <div class="div_car_main">
+          <img
+            class="div_img"
+            src="{{ url_for('static', filename='Gynecology & Obstetrics.jpeg') }}"
+          />
+          <div id="div_car">
+            <dt>
+              <u><b>Gynecology & Obstetrics</b></u>
+            </dt>
+            <dd>
+              Women’s health, pregnancy care, childbirth, and reproductive
+              medicine.
+              <button id="butid86">Gynecology & Obstetrics</button>
+            </dd>
+          </div>
+          <br />
+        </div>
+<br /><br />
+        <div class="div_car_main">
+          <img
+            class="div_img"
+            src="{{ url_for('static', filename='Dermatology.jpg') }}"
+          />
+          <div id="div_car">
+            <dt style="color: #5e5a5a;">
+              <u><b>Dermatology</b></u>
+            </dt>
+            <dd style="color: #5e5a5a;">
+              Skin, hair, and cosmetic treatments for all age groups.
+              <button id="butid87">Dermatology</button>
+            </dd>
+          </div>
+          <br />
+        </div>
+<br /><br />
+        <div class="div_car_main">
+          <img
+            class="div_img"
+            src="{{ url_for('static', filename='ENT (Ear, Nose, Throat).jpg') }}"
+          />
+          <div id="div_car">
+            <dt>
+              <u><b>ENT (Ear, Nose, Throat)</b></u>
+            </dt>
+            <dd>
+              Sinus care, hearing solutions, throat infection management, and
+              surgeries.
+              <button id="butid88">ENT (Ear, Nose, Throat)</button>
+            </dd>
+          </div>
+          <br />
+        </div>
+<br /><br />
+        <div class="div_car_main" >
+          <img
+            class="div_img"
+            src="{{ url_for('static', filename='General Medicine.jpg') }}"
+          />
+          <div id="div_car" >
+            <dt>
+              <p style="color: #5e5a5a;"><u><b>General Medicine</b></u></p>
+            </dt>
+            <dd style="color: #5e5a5a;">
+              Primary care for fever, infections, diabetes, and hypertension.
+              <button id="butid89">General Medicine</button>
+            </dd>
+          </div>
+          <br />
+        </div>
+<br /><br />
+        <div class="div_car_main">
+          <img
+            class="div_img"
+            src="{{ url_for('static', filename='Emergency & Trauma.jpg') }}"
+          />
+          <div id="div_car">
+            <dt>
+              <u><b>Emergency & Trauma</b></u>
+            </dt>
+            <dd>
+              24/7 accident care, critical injury management, and life-saving
+              interventions.
+              <button id="butid810">Emergency & Trauma</button>
+            </dd>
+          </div>
+          <br />
+        </div>
+<br /><br />
+        <div class="div_car_main">
+          <img
+            class="div_img"
+            src="{{ url_for('static', filename='Urology.jpg') }}"
+          />
+          <div id="div_car">
+            <dt>
+              <u><b>Urology</b></u>
+            </dt>
+            <dd>
+              Kidney, bladder, urinary tract, and male reproductive health
+              services.
+              <button id="butid811">Urology</button>
+            </dd>
+          </div>
+          <br />
+        </div>
+<br /><br />
+        <div class="div_car_main">
+          <img
+            class="div_img"
+            src="{{ url_for('static', filename='Gastroenterology.jpg') }}"
+          />
+          <div id="div_car">
+            <dt>
+              <u><b>Gastroenterology</b></u>
+            </dt>
+            <dd>
+              Specialized care for stomach, liver, intestines, and digestive
+              disorders.
+              <button id="butid812">Gastroenterology</button>
+            </dd>
+          </div>
+          <br />
+        </div>
+<br /><br />
+        <div class="div_car_main">
+          <img
+            class="div_img"
+            src="{{ url_for('static', filename='Pulmonology.jpg') }}"
+          />
+          <div id="div_car">
+            <dt>
+              <u><b>Pulmonology</b></u>
+            </dt>
+            <dd>
+              Treatment for respiratory issues like asthma, COPD, and
+              tuberculosis.
+              <button id="butid813">Pulmonology</button>
+            </dd>
+          </div>
+          <br />
+        </div>
+
+        <br />
+      </dl>
+    </main>
+    <button id="main_but">print</button>
+    <footer class="footer">
+      <div id="div">
+        <p style="text-align: center; font-size: 16px; color: #333; margin: 0">
+          Thank you for visiting our website
+        </p>
+        <hr style="margin: 5px 0; border: 0; border-top: 1px solid #ccc" />
+        <p style="text-align: center; font-size: 14px; color: #555; margin: 0">
+          Copyright © 1995-2021 eBay Inc. All Rights Reserved.
+        </p>
+      </div>
+
+      <div id="" div1>
+        <details>
+          contact details email:<em title="gmail.com"> kushaltr454@gmail.com</em
+          ><br />
+          Phone Number :608-436-3016<br />
+        </details>
+      </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}">
+      
+        
+
+    </script>
+    
+  </body>
+</html>

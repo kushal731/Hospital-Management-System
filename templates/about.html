@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About our hospital</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  
+<body>
+
+    <header>
+        <!-- Left: Logo -->
+        <div class="logo">
+            <img src="static\hospital1.jpg" alt="Logo" width="150">
+        </div>
+
+        <!-- Middle: Search -->
+        <div class="search-bar">
+            <h3 style="color:white;">Search what type of service you want</h3>
+            <form action="/search" method="post">
+            <input type="text" placeholder="Search" name="AAname">
+            <div class="sub"><button type="submit" class="search"><img id="search1" src="{{ url_for('static', filename='search_logo.jpg') }}"></button></div>
+            </form>
+        </div>
+
+        <!-- Right: Navigation -->
+        <nav>
+            <a href="/home">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/Create_account">account create</a>
+            <a href="/">login</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about-hospital" style="text-align:left; margin:20px;">
+    <h2 style="color:#483d8b; text-align:center;">About Our Hospital</h2>
+    <p>
+        At <strong>[Your Hospital Name]</strong>, we are dedicated to providing world-class healthcare 
+        with compassion, innovation, and excellence. Our hospital combines highly skilled doctors, 
+        advanced medical technology, and patient-centered care to meet the diverse needs of our community.
+    </p>
+    <p>
+        Since our establishment, we have grown into a trusted healthcare institution known for 
+        delivering specialized treatments across multiple departments including Cardiology, Neurology, 
+        Orthopedics, Pediatrics, Oncology, Gynecology & Obstetrics, Dermatology, ENT, General Medicine, 
+        Emergency & Trauma, Urology, Gastroenterology, and Pulmonology.
+    </p><br>
+    <p>
+        We believe in a <em>patient-first approach</em>, ensuring personalized care and attention 
+        for every individual. Our facilities are equipped with modern diagnostic tools, advanced 
+        surgical units, and 24/7 emergency services to provide comprehensive medical support.
+    </p><br>
+    <p>
+        Beyond treatment, we emphasize preventive healthcare, wellness programs, and community outreach 
+        initiatives to promote healthier living. Our mission is not only to cure but also to care, 
+        guiding patients toward long-term well-being.
+    </p><br>
+    <p style="text-align:center; font-weight:bold; color:#555;">
+        Your health, our commitment.
+    </p>
+</section>
+
+    </main>
+
+    <footer class="footer">
+        <div id="div">
+            <p style="text-align:center; font-size:16px; color:#333; margin:0;">
+                Thank you for visiting our website
+            </p>
+            <hr style="margin:5px 0; border:0; border-top:1px solid #ccc;">
+            <p style="text-align:center; font-size:14px; color:#555; margin:0;">
+                Copyright © 1995-2021 eBay Inc. All Rights Reserved.
+            </p>
+        </div>
+
+        <div id="" div1>
+            <details>
+                contact details
+                email:<em title="gmail.com"> kushaltr454@gmail.com</em><br>
+                Phone Number :608-436-3016<br>
+
+            </details>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

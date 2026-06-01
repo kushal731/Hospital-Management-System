@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylecon.css') }}">
+  
+<body>
+
+    <header>
+        <!-- Left: Logo -->
+        <div class="logo">
+            <img src="static\hospital1.jpg" alt="Logo" width="150">
+        </div>
+
+        <!-- Middle: Search -->
+        <div class="search-bar">
+            <h3 style="color:white;">Search what type of service you want</h3>
+            <form action="/search" method="post">
+            <input type="text" placeholder="Search" name="AAname">
+            <div class="sub"><button type="submit" class="search"><img id="search1" src="{{ url_for('static', filename='search_logo.jpg') }}"></button></div>
+            </form>
+        </div>
+
+        <!-- Right: Navigation -->
+        <nav>
+            <a href="/home">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/Create_account">account create</a>
+            <a href="/">login</a>
+        </nav>
+    </header>
+
+    <main>
+ <section id="contact" style="margin:20px;  text-align:left;">
+    <h2 style="color:#483d8b; text-align:center;">Contact Us</h2>
+    <p>
+        We are here to assist you with any inquiries, appointments, or feedback. 
+        Please reach out to us using the details below or by filling out the contact form.
+    </p>
+
+    <h3>📍 Address</h3>
+    <address>
+        <p>
+            [Your Hospital Name]<br>
+            1306 Lauren Drive<br>
+            Madison, WI 53703<br>
+        </p>
+    </address>
+
+    <h3>📞 Phone</h3>
+    <p>
+        Landline: 608-436-3016<br>
+        <span>phone no: </span><a href="tel:6361142946">6361142946</a>
+    </p>
+
+    <h3>✉️ Email</h3>
+    <p>
+        <a href="mailto:kushaltr454@gmail.com">kushaltr454@gmail.com</a>
+    </p>
+
+    <h3>📝 Contact Form</h3>
+    <form action="/send_message" method="post" style="max-width:500px;">
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="Con_name" required style="width:100%; padding:8px; margin:5px 0;"><br>
+
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="Con_email" required style="width:100%; padding:8px; margin:5px 0;"><br>
+
+        <label for="Aphone">Your Phone no:</label><br>
+        <input type="text" id="Aphone" name="Con_phone" required style="width:100%; padding:8px; margin:5px 0;"><br>
+
+        
+
+        <label for="Acity">Select a City:</label>
+        <select id="Acity" name="Con_city">
+        <option value="Delhi">Delhi</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Bengaluru">Bengaluru</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Pune">Pune</option>
+        <option value="Ahmedabad">Ahmedabad</option>
+        <option value="Jaipur">Jaipur</option>
+        <option value="Lucknow">Lucknow</option>
+        <option value="Bengaluru">Bengaluru</option>
+        <option value="Mysuru">Mysuru</option>
+        <option value="Mangaluru">Mangaluru</option>
+        <option value="Hubli-Dharwad">Hubli-Dharwad</option>
+        <option value="Belagavi">Belagavi</option>
+        <option value="Kalaburagi">Kalaburagi</option>
+        <option value="Tumakuru">Tumakuru</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Pune">Pune</option>
+        <option value="Nagpur">Nagpur</option>
+        <option value="Nashik">Nashik</option>
+        <option value="Aurangabad">Aurangabad</option>
+
+
+        </select><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="con_message" rows="5" required style="width:100%; padding:8px; margin:5px 0;"></textarea><br>
+
+        <button type="submit" style="background:#483d8b; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">
+            Send Message
+        </button>
+        {% if mess %}
+        <p style="color:purple;">{{ mess }}</p>
+        {% endif %}
+    </form>
+</section>
+
+    </main>
+
+    <footer class="footer">
+        <div id="div">
+            <p style="text-align:center; font-size:16px; color:#333; margin:0;">
+                Thank you for visiting our website
+            </p>
+            <hr style="margin:5px 0; border:0; border-top:1px solid #ccc;">
+            <p style="text-align:center; font-size:14px; color:#555; margin:0;">
+                Copyright © 1995-2021 eBay Inc. All Rights Reserved.
+            </p>
+        </div>
+
+        <div id="" div1>
+            <details>
+                contact details
+                email:<em title="gmail.com"> kushaltr454@gmail.com</em><br>
+                Phone Number :608-436-3016<br>
+
+            </details>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

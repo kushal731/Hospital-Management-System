@@ -1,0 +1,370 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #eff9ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(123, 204, 255);
+    /* light purple */
+    padding: 15px;
+    color: white;
+    
+}
+
+.logo img {
+    max-width: 120px;
+    height: auto;
+    filter: drop-shadow(10px 10px 15px rgb(124, 124, 124));
+}
+
+/* Search Bar */
+.search-bar {
+  flex: 1;
+  text-align: center;
+  margin: 10px;
+}
+
+.search-bar h3 {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.search-bar form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-bar input {
+  padding: 8px;
+  width: 80%;
+  max-width: 300px;
+  border: none;
+  border-radius: 5px;
+    
+}
+
+.search {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.search img {
+  width: 20px;
+  height: 20px;
+}
+
+.search:hover {
+  background: #6a5acd;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 10px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: #483d8b;
+    border-radius: 5px;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+main h1 {
+    color: #4b0082;
+    margin-bottom: 10px;
+}
+
+main h4 {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+dl dt {
+    font-size: 25px;
+    margin-top: 10px;
+    color: #4b0082;
+}
+
+dl dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+button {
+    background: #bdb3ff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #483d8b;
+}
+/* button#butid81 {
+    background: #bdb3ff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button#butid81:hover {
+    background: #483d8b;
+} */
+
+/* Footer */
+.footer {
+    background: #eee;
+    padding: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer details {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.div_car_main{
+    position: relative;
+    width: 80vw;
+    height: 80vh;
+}
+.div_car_main dt{
+    top: 10px;
+    padding-top: 15px;
+    padding-left: 50px;
+    color: #eee;
+    position: absolute;
+}
+.div_img{
+    position: absolute;
+    width: 80vw;
+    height: 80vh;
+    border-radius: 70px 10px 50px 10px;
+    /* background-color: transparent; */
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+#div_car dd{
+    position: absolute;
+    width: 80vw;
+    height: 80vh;
+    border:  beige 1px;
+    border-radius: 70px 10px 50px 10px;
+    /* background: dodgerblue;; */
+    padding-top: 70px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #eff9ff;
+    font-size: 20px;
+    /* padding: 30px; */
+}
+
+
+.div_car_main2{
+    position: relative;
+    width: 80vw;
+    height: 80vh;
+    /* margin-left: 70px; */
+}
+.div_car_main2 dt{
+    top: 10px;
+    padding-top: 15px;
+    padding-left: 50px;
+    color: #eee;
+    position: absolute;
+    /* margin-left: 70px; */
+}
+.div_img2{
+    position: absolute;
+    width: 80vw;
+    height: 80vh;
+    border-radius: 70px 10px 50px 10px;
+    /* background-color: transparent; */
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    /* margin-left: 70px; */
+}
+#div_car2 dd{
+    position: absolute;
+    width: 80vw;
+    height: 80vh;
+    border:  beige 1px;
+    border-radius: 70px 10px 50px 10px;
+    /* background: dodgerblue;; */
+    padding-top: 70px;
+    padding-left: 49px;
+    padding-right: 30px;
+    color: #eff9ff;
+    font-size: 20px;
+    /* padding: 30px; */
+    /* margin-left: 70px; */
+}
+/* Responsive adjustments */
+/* @media (max-width: 1024px) {
+  #div_car dd,
+  #div_car2 dd {
+    font-size: 18px;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+} */
+
+/* @media (max-width: 768px) {
+  .div_car_main,
+  .div_car_main2,
+  .div_img,
+  .div_img2,
+  #div_car dd,
+  #div_car2 dd {
+    width: 95vw;
+    height: auto;
+    min-height: 400px;
+  } */
+
+  /* #div_car dd,
+  #div_car2 dd {
+    font-size: 16px;
+    padding-top: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+  } */
+
+  /* .div_car_main dt,
+  .div_car_main2 dt {
+    left: 20px;
+    font-size: 1rem;
+  }
+} */
+
+/* @media (max-width: 480px) {
+  .div_car_main,
+  .div_car_main2,
+  .div_img,
+  .div_img2,
+  #div_car dd,
+  #div_car2 dd {
+    width: 100vw;
+    height: auto;
+    min-height: 300px;
+  } */
+
+  /* #div_car dd,
+  #div_car2 dd {
+    font-size: 14px;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .div_car_main dt,
+  .div_car_main2 dt {
+    left: 10px;
+    font-size: 0.9rem;
+  }
+} */
+/* @media (min-width: 1400px) {
+  .div_car_main,
+  .div_car_main2,
+  .div_img,
+  .div_img2,
+  #div_car dd,
+  #div_car2 dd {
+    width: 70vw;   /* slightly narrower for readability */
+    /* height: auto; */
+    /* min-height: 500px; */
+    /* margin: 0 auto; center on big screens */
+  /* } */ 
+/* 
+  #div_car dd,
+  #div_car2 dd {
+    font-size: 22px;
+    padding-top: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
+  } */
+
+  /* .div_car_main dt,
+  .div_car_main2 dt {
+    left: 60px;
+    font-size: 1.3rem;
+  }
+} */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    main h1 {
+        font-size: 22px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    dl dt {
+        font-size: 16px;
+    }
+
+    dl dd {
+        font-size: 14px;
+    }
+}

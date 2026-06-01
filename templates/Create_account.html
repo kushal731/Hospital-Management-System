@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create a account</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_create.css') }}">
+</head>
+<body>
+    <h1>create account</h1><br>
+    <form action="/create_acc" method="post">
+        <input type="text" placeholder="Enter name" name="Cname"></input><br>
+        <input type="text" placeholder="Enter lastname" name="Clname"></input><br>
+        <input type="date" placeholder="Enter DOB" name="DOB"></input><br>
+        <input type="number" placeholder="Enter phone" name="phone"></input><br>
+        <input type="email" placeholder="Enter email" name="email"></input><br>
+        <input type="password" placeholder="Create new password" name="npass_word"></input><br>
+        <button class="create_acc" type="submit">Create</button>
+        
+    </form>
+</body>
+</html>

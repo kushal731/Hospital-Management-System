@@ -1,0 +1,17 @@
+/* Hide navigation and forms */
+nav, form, .search-bar, .footer {
+  display: none;
+}
+
+/* Ensure text is readable */
+body {
+  font-family: Arial, sans-serif;
+  color: black;
+  background: white;
+}
+
+/* Force portrait layout */
+@page {
+  size: A4 portrait;
+  margin: 20mm;
+}
