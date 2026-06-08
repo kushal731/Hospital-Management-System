@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylelogin.css') }}">
+</head>
+<body>
+    <header style="margin-top: -500px ;;">
+        <h1>Forgot Password</h1><br>
+    </header>
+    <br>
+    <main>
+        
+        <form action="/Enter_OTP" method="post">
+            <input type="number" placeholder="Enter OTP" name="En_OTP"><br><br>
+            <button class="/Enter_OTP" type="submit">Next</button><br>
+            
+            </form>
+            {% if Message %}
+        <p style="color:red;">{{ Message }}</p>
+        {% endif %}
+
+    </main>
+</body>
+</html>

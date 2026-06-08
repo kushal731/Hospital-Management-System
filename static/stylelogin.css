@@ -87,6 +87,11 @@ form .login1[type="submit"]:hover {
     margin-top: 10px;
 }
 
+#forget p{
+    background-color: #6a0dad;
+    color: rgb(43, 117, 255);
+    }
+
 .create1:hover {
     background: #4b0082; /* darker purple */
 }

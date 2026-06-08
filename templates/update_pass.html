@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update password</title>
+  
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylelogin.css') }}">
+</head>
+<body>
+    <header style="margin-top: -500px ;;">
+        <h1>update password</h1><br>
+    </header>
+    <br>
+    <main>
+        <form action="/update_password" method="post">
+            <input type="password" placeholder="new password" name="update_password"><br>
+            <button class="/update_password" type="submit">update</button><br>
+            </form><br>
+             {% if Message %}
+        <p style="color:red;">{{ Message }}</p>
+        {% endif %}
+        
+    </main>
+</body>
+</html>

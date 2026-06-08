@@ -39,12 +39,13 @@ my_cursor=conn.cursor()
 #---------------------------------------------------This is about Login page ----------------------------------------------------------------------------------------------------------
 @app.route("/")
 def login():
-    return render_template("loginnew.html")
+    return render_template("login.html")
 
 @app.route("//login1", methods=["POST"])
 def loginver():
     email = request.form.get("Email").strip()      # strip whitespace
     npass_word = request.form.get("npass_word").strip()
+    session['email_login'] = email
     if email=="" :
         return render_template("login.html", message="kindy Enter your email and password")
     if npass_word=="" :
@@ -65,11 +66,81 @@ def loginver():
         if npass_word == stored_password:
             return redirect(url_for("home"))
         else:
-            return render_template("loginnew.html", message="The password is incorrect")
+            return render_template("login.html", message="The password is incorrect")
     else:
-        return render_template("loginnew.html", message="Account not found, please create one")
+        return render_template("login.html", message="Account not found, please create one")
 
-#---------------------------------------------------This is about Create account page ----------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------------------
+
+def otp():
+    Otp=r.randint(100000,999999)
+    return Otp
+@app.route("/Get_OTP" ,methods=["POST"])
+def forgot():
+    Email=request.form.get("Email").strip()
+    my_cursor.execute("select nemail from app.account_1 where nemail=%s",(Email,))
+    ver_email=my_cursor.fetchone()
+    if ver_email:
+        
+        pos=otp()
+        session['otp'] = pos
+        session['ver_email'] = ver_email
+        
+        msg = Message(
+                subject="Your OTP Code for Verification",
+                recipients=[Email]
+            )
+        msg.body = f'''Hello,\n\n
+            Your One-Time Password (OTP) is: {pos}\n
+            Please enter this code in the application to complete your verification.\n
+            This code will expire in 10 minutes.
+            Thank you,\n
+            Hospital Management System Team
+        '''
+            # Attach the PDF
+        mail.send(msg)
+        print("Email sent successfully!")
+        return render_template("forgot_OPT.html")
+    else:
+        return render_template("forgot_pass.html",Message="Enter gmail is not exist so create a account")
+    
+# 
+@app.route("/Enter_OTP" ,methods=["POST"])
+def verify_otp():
+    En_OTP=request.form.get("En_OTP").strip()
+    ne_En_OTP=int(En_OTP)
+    pos = session.get('otp')
+    if ne_En_OTP==pos:
+        return render_template("update_pass.html")
+    return render_template("forgot_OPT.html",Message="wrong opt")
+
+
+@app.route("/froget1" ,methods=["POST"])
+def forget_pass():
+    
+    return render_template("forgot_pass.html")
+
+
+@app.route("/update_password" ,methods=["POST"])
+def update_password():
+    new_password = request.form.get("update_password").strip()
+    
+    # Ensure email is a string, not a tuple
+    email_tuple = session.get('ver_email')
+    if isinstance(email_tuple, tuple):
+        email = email_tuple[0]
+    else:
+        email = email_tuple
+
+    sql = "UPDATE app.account_1 SET npass_word = %s WHERE nemail = %s"
+    values = (new_password, email)
+
+    my_cursor.execute(sql, values)
+    conn.commit()
+
+    return render_template("update_pass.html", Message="Password updated")
+
+#---------------------------------------------------This is about Create account page ---------------------------------------------------------------------------------------------------------
 
 @app.route("/Create_account")
 def Create_account():
