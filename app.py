@@ -75,6 +75,7 @@ def loginver():
 def otp():
     Otp=r.randint(100000,999999)
     return Otp
+
 @app.route("/Get_OTP" ,methods=["POST"])
 def forgot():
     Email=request.form.get("Email").strip()
@@ -584,6 +585,7 @@ def contact_back():
     collection.insert_one(customer)
     
     print("successful")
+    
     return render_template("contact.html", mess="The details are taken by the software.Our team will contact you")
 
 @app.route('/about')
@@ -595,4 +597,6 @@ def dapartment_name():
     return dapartment
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0',debug=True)
+    app.run(debug=True)
+    
+    # host='0.0.0.0',
